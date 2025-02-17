@@ -1,13 +1,16 @@
 version: "3.8"
+
 services:
   chat-server:
     build:
       context: .
       dockerfile: build/docker/Dockerfile  
-      env_file: 
-      - build/docker/env.env
+    env_file: 
+      - build/docker/env.env 
     ports:
       - "3001:3001"
     restart: always
     volumes:
       - .:/app
+
+
