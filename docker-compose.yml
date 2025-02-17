@@ -1,7 +1,7 @@
 version: "3.8"
 
 services:
-pgdm-socket-messages:
+  pgdm-socket-messages:
     image: pgdm-socket-messages
     env_file: 
       - build/docker/env.env
