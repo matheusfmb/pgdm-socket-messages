@@ -4,8 +4,8 @@ services:
     build:
       context: .
       dockerfile: build/docker/Dockerfile  
-    environment:
-      - DB_URL=postgresql://root:Stormchadow123@13.59.229.215:5432/pgdm
+      env_file: 
+      - build/docker/env.env
     ports:
       - "3001:3001"
     restart: always
