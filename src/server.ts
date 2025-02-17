@@ -53,6 +53,7 @@ io.on("connection", (socket) => {
 
             console.log(`📨 Enviando histórico de mensagens entre ${userId} e ${contactId}`)
 
+            
             // Marcar mensagens como lidas
             await pool.query(
                 "UPDATE messages SET read = TRUE WHERE receiver_id = $1 AND sender_id = $2",
